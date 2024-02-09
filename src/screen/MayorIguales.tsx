@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { InputComponent } from '../components/InputComponents'; 
 import { ButtonComponent } from '../components/ButtonComponent';
 
@@ -23,7 +23,15 @@ export const MayorIguales = () => {
             <InputComponent placeholder="numero1" numero={numero1} onChangeText={setNumero1} />
             <InputComponent placeholder="numero2" numero={numero2} onChangeText={setNumero2} />
             <ButtonComponent title=">=" onPress={NumeroMayor} />
-            <Text>El numero mayor: {resultado}</Text>
+            <Text style={styles.Resultado}>El numero mayor: {resultado}</Text>
         </View>
     );
 };
+const styles=StyleSheet.create({
+    Resultado:{
+    fontSize:27,
+    color:'white',
+    fontWeight:'bold',
+    textAlign:'center'
+    }
+})

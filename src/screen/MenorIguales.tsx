@@ -1,6 +1,6 @@
 import { StackScreenProps } from '@react-navigation/stack'
 import React, { useState } from 'react'
-import { Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { RouterStackParamList } from '../navigator/StackNavigator'
 import { InputComponent } from '../components/InputComponents';
 import { ButtonComponent } from '../components/ButtonComponent';
@@ -24,7 +24,15 @@ export const MenorIguales = () => {
             <InputComponent placeholder="numero1" numero={numero1} onChangeText={setNumero1} />
             <InputComponent placeholder="numero2" numero={numero2} onChangeText={setNumero2} />
             <ButtonComponent title=">=" onPress={NumeroMayor} />
-            <Text>{resultado}</Text>
+            <Text style={styles.Resultado}>{resultado}</Text>
         </View>
     );
 };
+const styles=StyleSheet.create({
+    Resultado:{
+    fontSize:27,
+    color:'white',
+    fontWeight:'bold',
+    textAlign:'center'
+    }
+})

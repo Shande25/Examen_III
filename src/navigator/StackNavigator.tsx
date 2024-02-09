@@ -16,7 +16,7 @@ export type RouterStackParamList={
 const Stack = createStackNavigator<RouterStackParamList>();
 export const StackNavigator=()=> {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerStyle:{elevation:0}, cardStyle:{backgroundColor:'#20232a'}}} >
       {/* <Stack.Screen name="Bienvida" options={{title:'Imagen1'}} options={{headerShown:true}} component={Bienvenida} /> */}
       <Stack.Screen name="Bienvida"  component={Bienvenida} />
       <Stack.Screen name="Imagen1"  component={Imagen1} />

@@ -9,7 +9,7 @@ interface ButtonProps{
 export const ButtonComponent = ({title,onPress}:ButtonProps) => {
   return (
     <TouchableOpacity style={style.buttonContiner}>
-        <Text style={style.buttoText} onPress={onPress} >{title}</Text>
+        <Text style={style.buttoText} onPress={onPress}>{title}</Text>
     </TouchableOpacity>
   )
 }
