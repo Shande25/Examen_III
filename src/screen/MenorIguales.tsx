@@ -16,7 +16,7 @@ export const MenorIguales = () => {
 
         if ((num1) && (num2)) {
             const menor = Math.min(num1, num2);
-            setResultado(`El numero menor es: ${menor}`);
+            setResultado(`${menor}`);
         }
     };
     return (
@@ -24,7 +24,7 @@ export const MenorIguales = () => {
             <InputComponent placeholder="numero1" numero={numero1} onChangeText={setNumero1} />
             <InputComponent placeholder="numero2" numero={numero2} onChangeText={setNumero2} />
             <ButtonComponent title=">=" onPress={NumeroMayor} />
-            <Text style={styles.Resultado}>{resultado}</Text>
+            <Text style={styles.Resultado}>El numero menor: {resultado}</Text>
         </View>
     );
 };
